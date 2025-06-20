@@ -1,3 +1,4 @@
+ 
 let salary = 12300;
 let annualSalary = (12300 * 12);
 let bonus = annualSalary * 0.2;
