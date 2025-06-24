@@ -82,3 +82,19 @@ let minus = (a, b) =>{
     return a - b;
 }
 console.log(minus(30, 20));
+
+let greetUser = (func, name) =>{
+    console.log("Processing...");
+    if(name ==="X") func(name);
+};
+
+greetUser((name)=>{
+    console.log(`Hello, ${name}`)
+}, "X");
+
+// IIFE(Immediately Invoked Function Expression)
+
+(function(){
+    console.log("IIFE");
+})();
+
