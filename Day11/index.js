@@ -23,7 +23,7 @@ function Bank(initialAmount){
 
     return {
         deposit: (amount) =>{
-             balance += amount;
+            balance += amount;
             console.log("Deposit", amount, "Current Balnace", balance);
         },
         withdraw: (amount) =>{
@@ -47,3 +47,4 @@ AmarBank = Bank(100);
 AmarBank.deposit(400); // 500
 AmarBank.withdraw(200);
 AmarBank.checkBalance();
+
