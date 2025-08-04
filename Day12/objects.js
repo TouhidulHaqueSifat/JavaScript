@@ -80,4 +80,11 @@ for(key in profile){
     //console.log(profile[key]);
 }
 console.log(Object.keys(profile).length)
-console.log(profile.address.greeting())
+console.log(profile.address.greeting());
+let isSalary = 'salary' in profile;
+if(!isSalary){
+    console.log("The salary property doesn't exixt");
+}
+
+console.log(profile.address.country);
+
