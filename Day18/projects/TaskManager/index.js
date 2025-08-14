@@ -28,16 +28,28 @@ function addTask(){
     taskList.appendChild(li);
 
     textElm.value= "";
-
+    
     editBtn.addEventListener("click",()=>{
-        let input = document.createElement("input");
+        input = document.createElement("input");
         input.type = "text";
-        input.value = li.firstChild.textContent;
-        li.firstChild.textContent = "";
-        //li.firstChild.remove(); // clear current text
-        li.insertBefore(input, li.firstChild);
+        updateTask = li.firstChild.textContent;
+        input.value = updateTask;
+        console.log("Update Task", updateTask);
         
 
+        const saveBtn = document.createElement("button");
+        saveBtn.innerText = "💾";
+        saveBtn.style.marginLeft = "10px";
+        li.insertBefore(input, li.firstChild);
+        li.removeChild(li.firstChild.nextSibling);
+        li.insertBefore(saveBtn, completeBtn);
+        
+        saveBtn.addEventListener("click",()=>{
+            li.insertBefore(document.createTextNode(input.value), li.firstChild);
+            li.removeChild(input);
+            li.removeChild(saveBtn);
+        })
+    
     })
     deleteBtn.addEventListener("click", ()=>{
         taskList.removeChild(li);
