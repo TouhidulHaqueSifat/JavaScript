@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table with Search</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h2>Dynamic Table</h2>
+
+<!-- Form to add rows -->
+<input type="text" id="nameInput" placeholder="Name">
+<input type="number" id="ageInput" placeholder="Age">
+<input type="text" id="roleInput" placeholder="Role">
+<button onclick="addRow()">Add Row</button>
+
+<!-- Search input -->
+<br>
+<input type="text" id="searchInput" placeholder="Search by Name" onkeyup="searchTable()">
+
+<!-- Table -->
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will appear here -->
+    </tbody>
+</table>
+
+<script src="index.js"></script>
+</body>
+</html>
