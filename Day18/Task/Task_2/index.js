@@ -18,7 +18,7 @@ function addRow(){
     deleteBtn.textContent = "Delete";
     deleteBtn.className = "delete-btn";
     deleteBtn.onclick = function() {
-        const row = this.parentElement.parentElement;
+        const row = deleteBtn.parentElement.parentElement;
         row.parentElement.removeChild(row);
     };
     actionCell.appendChild(deleteBtn);
