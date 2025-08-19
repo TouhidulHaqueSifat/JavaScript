@@ -35,12 +35,4 @@ body.dark button {
 }
 
 
-/* Move switch knob */
-#themeSwitch:checked + .switch::after {
-  transform: translateX(25px);
-  background: #222;
-}
 
-#themeSwitch:checked + .switch {
-  background: #f1f1f1;
-}
